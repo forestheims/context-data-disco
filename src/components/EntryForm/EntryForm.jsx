@@ -9,10 +9,19 @@ export default function EntryForm() {
   const [userInput, setUserInput] = useState('');
   const [message, setMessage] = useState('');
 
+  const userEntry = () => {
+    if (user) {
+      return user;
+    } else {
+      return userInput;
+    }
+  };
+
   const formSubmit = (e) => {
     e.preventDefault();
     setUser(userInput);
-    setEntries([...entries, { user, message, id: entries.length }]);
+    const id = entries.length;
+    setEntries([...entries, { user: userEntry(), message, id }]);
   };
 
   return (
