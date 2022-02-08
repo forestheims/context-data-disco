@@ -6,7 +6,7 @@ import Header from '../components/composition/Header';
 const AppContext = createContext();
 
 export function Composition({ children }) {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState('user NAME passing through CONTEXT');
   const [entries, setEntries] = useState([]);
 
   const contextValue = { user, setUser, entries, setEntries };

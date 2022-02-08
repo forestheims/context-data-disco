@@ -1,5 +1,7 @@
 import React from 'react';
+import { useAppContext } from '../../context/Composition';
 
 export default function Header() {
-  return <header>Header Presentational</header>;
+  const { user } = useAppContext();
+  return <header>{user}</header>;
 }
