@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../../context/Composition';
+import { useAppContext } from '../../views/Composition/Composition';
+import './EntryList.css';
 
 export default function EntryForm() {
   const { user, setUser, entries, setEntries } = useAppContext();

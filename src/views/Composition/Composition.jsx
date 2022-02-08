@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 import './Composition.css';
-import Footer from '../components/composition/Footer';
-import Header from '../components/composition/Header';
+import Footer from '../../components/composition/Footer';
+import Header from '../../components/composition/Header';
 
 const AppContext = createContext();
 

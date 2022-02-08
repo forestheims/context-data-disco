@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppContext } from '../../context/Composition';
+import { useAppContext } from '../../views/Composition/Composition';
 
 export default function Header() {
   const { user } = useAppContext();
