@@ -9,3 +9,9 @@
   height: 100vh;
   width: 100vw;
 }
+
+footer img:hover {
+  width: 60px;
+  background-color: yellowgreen;
+  border-radius: 9px;
+}
