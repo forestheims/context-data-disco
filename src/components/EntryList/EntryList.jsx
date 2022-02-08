@@ -1,8 +1,8 @@
 import React from 'react';
-import { useAppContext } from '../../views/Composition/Composition';
+import { useEntries } from '../../context/EntriesContext';
 
 export default function EntryList() {
-  const { entries } = useAppContext();
+  const { entries } = useEntries();
   return (
     <>
       {entries.map(({ id, message, user }) => (

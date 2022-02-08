@@ -1,7 +1,7 @@
 import React from 'react';
-import { useAppContext } from '../../views/Composition/Composition';
+import { useUser } from '../../context/UserContext';
 
 export default function Header() {
-  const { user } = useAppContext();
+  const { user } = useUser();
   return <header>{user ? `Hello, ${user}!` : `Welcome! Please Sign the message board`}</header>;
 }

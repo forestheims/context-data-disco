@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { useAppContext } from '../../views/Composition/Composition';
-import './EntryList.css';
+import { useEntries } from '../../context/EntriesContext';
+import { useUser } from '../../context/UserContext';
 
 export default function EntryForm() {
-  const { user, setUser, entries, setEntries } = useAppContext();
+  const { user, setUser } = useUser();
+  const { entries, setEntries } = useEntries();
 
   const [userInput, setUserInput] = useState('');
   const [message, setMessage] = useState('');
