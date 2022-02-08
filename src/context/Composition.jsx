@@ -7,12 +7,17 @@ const AppContext = createContext();
 
 export function Composition({ children }) {
   const [user, setUser] = useState();
+  const [entries, setEntries] = useState([]);
+
+  const contextValue = { user, setUser, entries, setEntries };
 
   return (
-    <AppContext.Provider className="composition" value={{ user, setUser }}>
-      <Header user={user} />
-      <main>{children}</main>
-      <Footer />
+    <AppContext.Provider value={contextValue}>
+      <div className="composition">
+        <Header user={user} />
+        <main>{children}</main>
+        <Footer />
+      </div>
     </AppContext.Provider>
   );
 }
