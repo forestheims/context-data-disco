@@ -22,4 +22,8 @@ test('behavioral test #1:', () => {
 
   const logoutButton = screen.getByRole('button', { name: `Not 'Mister Princess'?` });
   expect(logoutButton).toBeInTheDocument();
+
+  const headings = screen.getAllByRole('heading');
+  expect(headings[0].textContent).toBe('meow meow meow. Meow, meow Meowmeow...');
+  expect(headings[1].textContent).toBe('- Mister Princess');
 });
