@@ -1,3 +1,11 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
 .composition {
   display: flex;
   align-items: center;
@@ -18,13 +26,14 @@ footer img:hover {
 header {
   display: flex;
   justify-content: space-around;
-
+  font-weight: 600;
   width: 100vw;
 }
 
-header a {
+header * {
   color: yellowgreen;
   text-decoration: none;
+  margin: 19px;
 }
 
 header a:hover {

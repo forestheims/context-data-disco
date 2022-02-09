@@ -1,0 +1,39 @@
+.entrylist {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 19px;
+}
+
+.entry {
+  background-color: #5e3a48;
+  border-radius: 19px;
+  max-width: 30vw;
+}
+
+.entry-border {
+  display: flex;
+  flex-direction: column;
+  padding: 9px;
+  margin: 19px;
+  border: 2px solid orangered;
+  border-radius: 9px;
+  background-color: #462d37;
+}
+
+.entry-border:hover {
+  filter: drop-shadow(9px 9px 9px #60a1a1);
+  color: rgb(177, 235, 61);
+}
+
+h5 {
+  font-size: 1rem;
+  padding: 9px;
+}
+
+h6 {
+  font-size: 1rem;
+  margin: 3px;
+  color: #60a1a1;
+}

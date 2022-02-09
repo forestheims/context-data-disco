@@ -15,11 +15,12 @@ export default function EntryForm() {
     setUser(userInput);
     const id = entries.length;
     setEntries([...entries, { user: userInput, message, id }]);
+    setMessage('');
   };
 
   return (
     <form onSubmit={formSubmit}>
-      {!user ? (
+      {!user && (
         <>
           <label>User:</label>
           <input
@@ -29,8 +30,6 @@ export default function EntryForm() {
             onChange={(e) => setUserInput(e.target.value)}
           />
         </>
-      ) : (
-        <button onClick={() => setUser('')}>{`Not ${user}?`}</button>
       )}
       <label>Message:</label>
       <textarea
