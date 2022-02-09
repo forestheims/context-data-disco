@@ -13,7 +13,7 @@ export function UserProvider({ children }) {
 export function useUser() {
   const context = useContext(UserContext);
   if (context === undefined) {
-    throw new Error('Error: ...');
+    throw new Error('Error: useUser needs to be called within a UserProvider');
   }
   return context;
 }

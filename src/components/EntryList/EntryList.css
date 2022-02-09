@@ -27,13 +27,14 @@
   color: rgb(177, 235, 61);
 }
 
-h5 {
+.message {
   font-size: 1rem;
   padding: 9px;
 }
 
-h6 {
+.user {
   font-size: 1rem;
   margin: 3px;
   color: #60a1a1;
+  font-weight: 500;
 }

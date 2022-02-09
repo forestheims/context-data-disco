@@ -18,7 +18,7 @@ export default function EntryForm() {
     e.preventDefault();
     setUser(userInput);
     const id = entries.length;
-    setEntries([...entries, { user: userInput, message, id }]);
+    setEntries((prevState) => [...prevState, { user: userInput, message, id }]);
     setMessage('');
   };
 

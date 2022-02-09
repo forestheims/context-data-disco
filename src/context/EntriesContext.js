@@ -13,7 +13,7 @@ export function EntriesProvider({ children }) {
 export function useEntries() {
   const context = useContext(EntriesContext);
   if (context === undefined) {
-    throw new Error('Error: ...');
+    throw new Error('Error: useEntries needs to be called within a EntriesProvider');
   }
   return context;
 }

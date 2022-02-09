@@ -9,9 +9,9 @@ export default function EntryList() {
       {entries.map(({ id, message, user }) => (
         <div key={id} className="entry-border">
           <div className="entry">
-            <h5>{message}</h5>
+            <p className="message test-selector">{message}</p>
           </div>
-          <h6>- {user}</h6>
+          <p className="user test-selector">- {user}</p>
         </div>
       ))}
     </div>

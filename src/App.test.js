@@ -23,14 +23,14 @@ test('behavioral test #1:', async () => {
   const logoutButton = screen.getByRole('button', { name: `Not 'Mister Princess'?` });
   expect(logoutButton).toBeInTheDocument();
 
-  const headings = screen.getAllByRole('heading');
+  const headings = document.querySelectorAll('.test-selector');
   expect(headings[0].textContent).toBe('meow meow meow. Meow, meow Meowmeow...');
   expect(headings[1].textContent).toBe('- Mister Princess');
 
   userEvent.type(userInput[1], 'catspeak testing meows');
   userEvent.click(submitButton);
 
-  const headingsDoubled = screen.getAllByRole('heading');
+  const headingsDoubled = document.querySelectorAll('.test-selector');
   expect(headingsDoubled[0].textContent).toBe('meow meow meow. Meow, meow Meowmeow...');
   expect(headingsDoubled[1].textContent).toBe('- Mister Princess');
   expect(headingsDoubled[2].textContent).toBe('catspeak testing meows');
@@ -44,7 +44,7 @@ test('behavioral test #1:', async () => {
   userEvent.type(nextUserInput[1], 'I am not a cat');
   userEvent.click(submitButton);
 
-  const headingsTrippled = screen.getAllByRole('heading');
+  const headingsTrippled = document.querySelectorAll('.test-selector');
   expect(headingsTrippled[0].textContent).toBe('meow meow meow. Meow, meow Meowmeow...');
   expect(headingsTrippled[1].textContent).toBe('- Mister Princess');
   expect(headingsTrippled[2].textContent).toBe('catspeak testing meows');
