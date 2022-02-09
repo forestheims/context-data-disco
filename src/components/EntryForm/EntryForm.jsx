@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useEntries } from '../../context/EntriesContext';
 import { useUser } from '../../context/UserContext';
 import './EntryForm.css';
@@ -9,6 +9,10 @@ export default function EntryForm() {
 
   const [userInput, setUserInput] = useState('');
   const [message, setMessage] = useState('');
+
+  useEffect(() => {
+    setUserInput(user);
+  }, [user]);
 
   const formSubmit = (e) => {
     e.preventDefault();
