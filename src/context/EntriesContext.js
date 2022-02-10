@@ -11,8 +11,6 @@ export function EntriesProvider({ children }) {
     setEntries(localEntries);
   }, [localEntries]);
 
-  // setEntries(localEntries);
-
   const contextValue = { entries, setEntries };
 
   return <EntriesContext.Provider value={contextValue}>{children}</EntriesContext.Provider>;
