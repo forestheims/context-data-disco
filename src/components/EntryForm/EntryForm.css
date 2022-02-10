@@ -10,7 +10,7 @@ form {
 }
 
 form:hover {
-  filter: drop-shadow(9px 9px 9px #60a1a1);
+  filter: drop-shadow(3px 3px 3px #60a1a1);
 }
 
 input[type='text'],
@@ -35,14 +35,13 @@ input[type='submit'] {
   border-radius: 9px;
   color: magenta;
   font-size: 1rem;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: #2b2b2b;
 }
 
 input[type='submit']:hover,
 button:hover {
   cursor: pointer;
-  background-color: yellowgreen;
+  background-color: #284242;
 }
 
 input[type='text']:hover,
@@ -50,10 +49,4 @@ textarea:hover,
 input[type='text']:focus,
 textarea:focus {
   background-color: rgb(44, 24, 34);
-}
-
-button {
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
 }

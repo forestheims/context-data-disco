@@ -1,9 +1,15 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const UserContext = createContext();
 
 export function UserProvider({ children }) {
+  const [localUser] = useLocalStorage('user', '');
   const [user, setUser] = useState('');
+
+  useEffect(() => {
+    setUser(localUser);
+  }, [localUser]);
 
   const contextValue = { user, setUser };
 

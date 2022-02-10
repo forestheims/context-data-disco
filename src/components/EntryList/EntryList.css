@@ -23,8 +23,9 @@
 }
 
 .entry-border:hover {
-  filter: drop-shadow(9px 9px 9px #60a1a1);
+  filter: drop-shadow(3px 3px 3px #60a1a1);
   color: rgb(177, 235, 61);
+  cursor: pointer;
 }
 
 .message {

@@ -1,9 +1,17 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 const EntriesContext = createContext();
 
 export function EntriesProvider({ children }) {
+  const [localEntries] = useLocalStorage('entries', []);
   const [entries, setEntries] = useState([]);
+
+  useEffect(() => {
+    setEntries(localEntries);
+  }, [localEntries]);
+
+  // setEntries(localEntries);
 
   const contextValue = { entries, setEntries };
 
