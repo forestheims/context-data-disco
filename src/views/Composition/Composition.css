@@ -39,3 +39,12 @@ header * {
 header a:hover {
   color: #6ca100;
 }
+
+.welcome:hover + .instruction {
+  display: block;
+  color: yellowgreen;
+}
+
+.instruction {
+  display: none;
+}

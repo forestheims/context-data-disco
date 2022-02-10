@@ -8,9 +8,15 @@ export default function EntryList() {
 
   const [localEntries, setLocalEntries] = useLocalStorage('entries', []);
 
+  console.log('entries', entries);
+  console.log('localEntries', localEntries);
+
   const handleClick = (entry) => {
     const currentLocalEntries = localEntries;
     if (!currentLocalEntries.includes((incEntry) => incEntry.id === entry.id)) {
+      console.log('entries', entries);
+      console.log('localEntries', localEntries);
+      console.log('currentLocalEntries', currentLocalEntries);
       setLocalEntries([...localEntries, entry]);
     }
   };

@@ -8,9 +8,7 @@ export default function Header() {
 
   return (
     <header>
-      <a href="https://github.com/forestheims/context-data-disco">
-        GitHub Repo: useContext in action
-      </a>
+      <a href="https://github.com/forestheims/context-data-disco">GitHub Repo Link</a>
       {user && (
         <button
           onClick={() => {
@@ -19,7 +17,12 @@ export default function Header() {
           }}
         >{`Not '${user}'?`}</button>
       )}
-      <div>{user ? `Hello, ${user}!` : `Welcome! Please Sign the message board`}</div>
+      <div>
+        <div className="welcome">
+          {user ? `Hello, ${user}!` : `Welcome! Please Enjoy the Local Storage NotePad`}
+        </div>
+        <div className="instruction">Click on an entry to save it into Local Storage</div>
+      </div>
     </header>
   );
 }
