@@ -17,12 +17,7 @@ export default function Header() {
           }}
         >{`Not '${user}'?`}</button>
       )}
-      <div>
-        <div className="welcome">
-          {user ? `Hello, ${user}!` : `Welcome! Please Enjoy the Local Storage NotePad`}
-        </div>
-        <div className="instruction">Click on an entry to save it into Local Storage</div>
-      </div>
+      <div>{user ? `Hello, ${user}!` : `Welcome! Please Enjoy the Local Storage NotePad`}</div>
     </header>
   );
 }

@@ -40,11 +40,16 @@ header a:hover {
   color: #6ca100;
 }
 
-.welcome:hover + .instruction {
-  display: block;
-  color: yellowgreen;
+.instruction {
+  display: flex;
+  align-items: center;
+  background-color: #553f53;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 19px;
 }
 
-.instruction {
-  display: none;
+h2 {
+  color: #bb460f;
+  margin: 9px;
 }

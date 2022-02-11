@@ -23,6 +23,8 @@ export default function EntryForm() {
     const id = `${entries.length}${userInput}${message}`;
     setEntries((prevState) => [...prevState, { user: userInput, message, id }]);
     setMessage('');
+    const input = document.getElementById('message-input');
+    input.focus();
   };
 
   return (
@@ -41,6 +43,7 @@ export default function EntryForm() {
       <label>Message:</label>
       <textarea
         placeholder="Message"
+        id="message-input"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       />
