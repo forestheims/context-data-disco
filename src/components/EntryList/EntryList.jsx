@@ -5,19 +5,17 @@ import './EntryList.css';
 
 export default function EntryList() {
   const { entries } = useEntries();
-
   const [localEntries, setLocalEntries] = useLocalStorage('entries', []);
 
-  console.log('entries', entries);
-  console.log('localEntries', localEntries);
-
   const handleClick = (entry) => {
-    const currentLocalEntries = localEntries;
-    if (!currentLocalEntries.includes((incEntry) => incEntry.id === entry.id)) {
-      console.log('entries', entries);
-      console.log('localEntries', localEntries);
-      console.log('currentLocalEntries', currentLocalEntries);
+    if (!localEntries.some(({ id }) => id === entry.id)) {
       setLocalEntries([...localEntries, entry]);
+    } else {
+      // remove entry from local storage:
+      // - spread out local entries
+      // - find the entry object in the array that has a matching id to the clicked entry
+      // - remove that object from the array
+      // - re-setLocalEntries with the new array
     }
   };
 
