@@ -21,7 +21,7 @@ export function Composition({ children }) {
                   setInstruct(false);
                 }}
               >
-                okay. don&apos;t remind me again
+                Okay. don&apos;t remind me again
               </button>
               <button onClick={() => setInstruct(false)}>Remind me again next time I visit</button>
             </div>

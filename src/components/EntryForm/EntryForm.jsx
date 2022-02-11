@@ -29,7 +29,14 @@ export default function EntryForm() {
 
   return (
     <form onSubmit={formSubmit}>
-      {!user && (
+      {user ? (
+        <button
+          onClick={() => {
+            setUser('');
+            setLocalUser('');
+          }}
+        >{`Not '${user}'?`}</button>
+      ) : (
         <>
           <label>User:</label>
           <input
@@ -39,14 +46,6 @@ export default function EntryForm() {
             onChange={(e) => setUserInput(e.target.value)}
           />
         </>
-      )}
-      {user && (
-        <button
-          onClick={() => {
-            setUser('');
-            setLocalUser('');
-          }}
-        >{`Not '${user}'?`}</button>
       )}
       <label>Message:</label>
       <textarea
