@@ -13,11 +13,7 @@ export default function EntryList() {
     if (!localEntries.some(({ id }) => id === entry.id)) {
       setLocalEntries([...localEntries, entry]);
     } else {
-      // remove entry from local storage:
-      // - spread out local entries
-      // - find the entry object in the array that has a matching id to the clicked entry
-      // - remove that object from the array
-      // - re-setLocalEntries with the new array
+      setLocalEntries(localEntries.filter(({ id }) => id !== entry.id));
     }
   };
 
