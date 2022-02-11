@@ -10,9 +10,9 @@ test('renders header with a link and a welcome message', () => {
     </UserProvider>
   );
 
-  const headerWelcome = screen.getByText(/welcome! please sign the message board/i);
+  const headerWelcome = screen.getByText(/welcome! please enjoy the local notepad/i);
   expect(headerWelcome).toBeInTheDocument();
 
-  const headerLink = screen.getByRole('link', { name: /github repo: usecontext in action/i });
+  const headerLink = screen.getByRole('link', { name: /github repo link/i });
   expect(headerLink).toBeInTheDocument();
 });
