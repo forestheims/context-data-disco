@@ -23,7 +23,7 @@ export default function EntryList() {
         <div
           key={id}
           className={classNames('entry-border', {
-            'saved-class': localEntries.some((entry) => entry.id === id),
+            'saved-locally': localEntries.some((entry) => entry.id === id),
           })}
           onClick={() => handleClick({ id, message, user })}
         >

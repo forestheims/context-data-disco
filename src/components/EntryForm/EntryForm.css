@@ -10,7 +10,8 @@ form {
 }
 
 form:hover {
-  filter: drop-shadow(3px 3px 3px #60a1a1);
+  filter: drop-shadow(3px 3px 3px black);
+  background-color: #704a59;
 }
 
 input[type='text'],

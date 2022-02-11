@@ -17,17 +17,19 @@
   flex-direction: column;
   padding: 9px;
   margin: 19px;
-  border: 2px solid orangered;
+  border: 2px solid #b93100;
   border-radius: 9px;
   background-color: #462d37;
 }
 
-.saved-class {
-  border: 10px solid orangered;
+.saved-locally {
+  border-color: orangered;
+  background-color: #704a59;
+  filter: drop-shadow(3px 3px 3px black);
 }
 
 .entry-border:hover {
-  filter: drop-shadow(3px 3px 3px #60a1a1);
+  filter: drop-shadow(3px 3px 3px black);
   color: rgb(177, 235, 61);
   cursor: pointer;
 }
