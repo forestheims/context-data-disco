@@ -40,6 +40,14 @@ export default function EntryForm() {
           />
         </>
       )}
+      {user && (
+        <button
+          onClick={() => {
+            setUser('');
+            setLocalUser('');
+          }}
+        >{`Not '${user}'?`}</button>
+      )}
       <label>Message:</label>
       <textarea
         placeholder="Message"

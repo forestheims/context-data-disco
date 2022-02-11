@@ -2,7 +2,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 100vw;
 }
 
@@ -52,4 +52,12 @@ header a:hover {
 h2 {
   color: #bb460f;
   margin: 9px;
+}
+
+header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 9px;
+  height: 2rem;
 }
