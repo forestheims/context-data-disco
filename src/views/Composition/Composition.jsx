@@ -3,7 +3,7 @@ import Footer from '../../components/composition/Footer';
 import Header from '../../components/composition/Header';
 import { useState } from 'react';
 
-export function Composition({ children }) {
+export default function Composition({ children }) {
   const [instruct, setInstruct] = useState(true);
   return (
     <div className="composition">
