@@ -4,6 +4,7 @@ import Authentication from './views/Authentication/Authentication';
 import Composition from './views/Composition/Composition';
 import Home from './views/Home/Home';
 import Notes from './views/Notes/Notes';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -13,9 +14,9 @@ function App() {
           <Route path="/login">
             <Authentication />
           </Route>
-          <Route path="/notes">
+          <PrivateRoute path="/notes">
             <Notes />
-          </Route>
+          </PrivateRoute>
           <Route path="/">
             <Home />
           </Route>
