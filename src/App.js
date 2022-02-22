@@ -15,6 +15,9 @@ function App() {
           <Route path="/">
             <Home />
           </Route>
+          <Route path="/">
+            <Home />
+          </Route>
         </Switch>
       </Composition>
     </BrowserRouter>
