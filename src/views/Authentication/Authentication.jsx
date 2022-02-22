@@ -11,25 +11,36 @@ export default function Authentication() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formState);
     // if email and password are correct
     setLocalUser(formState.name);
     setFormState({ name: '', email: '', password: '' });
-    history.replace(from);
+    history.replace(from.pathname);
   };
 
   return (
     <>
       <form>
         <label htmlFor="name">Name:</label>
-        <input type="text" name="name" placeholder="Name" onChange={() => setFormState}></input>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          onChange={(e) => setFormState({ ...formState, name: e.target.value })}
+        ></input>
         <label htmlFor="email">Email:</label>
-        <input type="email" name="email" placeholder="Email" onChange={() => setFormState}></input>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={(e) => setFormState({ ...formState, email: e.target.value })}
+        ></input>
         <label htmlFor="password">Password:</label>
         <input
           type="password"
           name="password"
           placeholder="Password"
-          onChange={() => setFormState}
+          onChange={(e) => setFormState({ ...formState, password: e.target.value })}
         ></input>
         <input type="submit" onClick={handleSubmit} value="Sign In" />
       </form>
