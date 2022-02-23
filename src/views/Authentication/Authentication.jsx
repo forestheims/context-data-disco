@@ -5,17 +5,24 @@ import { useUser } from '../../context/UserContext';
 export default function Authentication() {
   const history = useHistory();
   const location = useLocation();
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const [formState, setFormState] = useState({ name: '', email: '', password: '' });
   const { from } = location.state || { from: { pathname: '/' } };
+  const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formState);
     // if email and password are correct
-    setUser(formState.name);
-    setFormState({ name: '', email: '', password: '' });
-    history.replace(from.pathname);
+    if (
+      formState.email === process.env.REACT_APP_AUTH_EMAIL &&
+      formState.password === process.env.REACT_APP_AUTH_PASSWORD
+    ) {
+      setUser(formState.name);
+      setFormState({ name: '', email: '', password: '' });
+      history.replace(from.pathname);
+    } else {
+      setError('login failed: try again');
+    }
   };
 
   return (
@@ -44,6 +51,7 @@ export default function Authentication() {
         ></input>
         <input type="submit" onClick={handleSubmit} value="Sign In" />
       </form>
+      <h3>{error}</h3>
     </>
   );
 }

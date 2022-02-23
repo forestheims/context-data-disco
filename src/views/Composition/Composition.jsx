@@ -1,31 +1,16 @@
 import './Composition.css';
 import Footer from '../../components/composition/Footer';
 import Header from '../../components/composition/Header';
-import { useState } from 'react';
+import Instructions from '../../components/Instructions/Instructions';
 
 export default function Composition({ children }) {
-  const [instruct, setInstruct] = useState(true);
   return (
     <div className="composition">
       <div>
         <Header />
         <main>
           {children}
-          {localStorage.getItem('visited') === null && instruct && (
-            <div className="instruction">
-              <h2>Instructions:</h2>
-              <h3>Click on an entry to save / delete it on Local Storage</h3>
-              <button
-                onClick={() => {
-                  localStorage.setItem('visited', false);
-                  setInstruct(false);
-                }}
-              >
-                Okay. don&apos;t remind me again
-              </button>
-              <button onClick={() => setInstruct(false)}>Remind me again next time I visit</button>
-            </div>
-          )}
+          <Instructions />
         </main>
       </div>
       <Footer />
