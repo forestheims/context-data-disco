@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
+import { useUser } from '../../context/UserContext';
 
 export default function Authentication() {
   const history = useHistory();
   const location = useLocation();
-  const [, setLocalUser] = useLocalStorage('user', '');
+  const { user, setUser } = useUser();
   const [formState, setFormState] = useState({ name: '', email: '', password: '' });
   const { from } = location.state || { from: { pathname: '/' } };
 
@@ -13,7 +13,7 @@ export default function Authentication() {
     e.preventDefault();
     console.log(formState);
     // if email and password are correct
-    setLocalUser(formState.name);
+    setUser(formState.name);
     setFormState({ name: '', email: '', password: '' });
     history.replace(from.pathname);
   };

@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useEntries } from '../../context/EntriesContext';
 import { useUser } from '../../context/UserContext';
 import './EntryForm.css';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export default function EntryForm() {
   const { user, setUser } = useUser();
   const { entries, setEntries } = useEntries();
-  const [, setLocalUser] = useLocalStorage('user', '');
 
   const [userInput, setUserInput] = useState('');
   const [message, setMessage] = useState('');
@@ -18,7 +16,6 @@ export default function EntryForm() {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    setLocalUser(userInput);
     setUser(userInput);
     const id = `${entries.length}${userInput}${message}`;
     setEntries((prevState) => [...prevState, { user: userInput, message, id }]);
@@ -33,7 +30,6 @@ export default function EntryForm() {
         <button
           onClick={() => {
             setUser('');
-            setLocalUser('');
           }}
         >{`Not '${user}'?`}</button>
       ) : (
