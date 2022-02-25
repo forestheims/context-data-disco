@@ -17,9 +17,9 @@ function App() {
           <PrivateRoute path="/notes">
             <Notes />
           </PrivateRoute>
-          <Route path="/">
+          <PrivateRoute path="/">
             <Home />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Composition>
     </BrowserRouter>
