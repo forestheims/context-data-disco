@@ -6,8 +6,7 @@ export default function Header() {
 
   return (
     <header>
-      <a href="https://github.com/forestheims/context-data-disco">GitHub Repo Link</a>
-      <div>{user ? `Hello, ${user}!` : `Welcome! Please Enjoy the Local NotePad`}</div>
+      <div>{user ? `Hello, ${user}!` : `Welcome! Please Sign In to Take Notes`}</div>
     </header>
   );
 }

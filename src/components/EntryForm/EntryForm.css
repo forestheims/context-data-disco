@@ -2,12 +2,13 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
   border: 2px solid orangered;
   border-radius: 9px;
   padding: 19px;
   background-color: #462d37;
-  height: 304px;
+  height: 400px;
+  margin-bottom: 40px;
 }
 
 form:hover {
@@ -16,6 +17,8 @@ form:hover {
 }
 
 input[type='text'],
+input[type='email'],
+input[type='password'],
 textarea,
 button,
 input[type='submit'] {
@@ -46,8 +49,12 @@ button:hover {
 }
 
 input[type='text']:hover,
+input[type='email']:hover,
+input[type='password']:hover,
 textarea:hover,
 input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
 textarea:focus {
   background-color: rgb(44, 24, 34);
 }

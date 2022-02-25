@@ -1,12 +1,11 @@
 import React from 'react';
-import EntryList from '../../components/EntryList/EntryList';
-import EntryForm from '../../components/EntryForm/EntryForm';
+import { useHistory } from 'react-router-dom';
 
 export default function Home() {
+  const history = useHistory();
   return (
     <>
-      <EntryForm />
-      <EntryList />
+      <button onClick={() => history.push('/notes')}>Add a Note</button>
     </>
   );
 }
